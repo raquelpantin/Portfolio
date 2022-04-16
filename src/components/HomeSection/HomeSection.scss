@@ -1,0 +1,82 @@
+@use "../../App.scss" as *;
+@use "../../styles/partials/_colors.scss" as *;
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_function.scss" as *;
+
+.hero {
+  background-image: url("../../assets/images/background.jpg");
+  mix-blend-mode: overlay;
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &-text {
+    position: absolute;
+    width: 1176px;
+    height: 452px;
+    left: 12rem;
+    top: 14rem;
+    font-weight: 600;
+    font-size: 150px;
+    line-height: 177px;
+    animation: animate 8s linear infinite;
+  }
+  &-title {
+    color: $text;
+  }
+
+  &-arrow {
+    color: $text;
+    width: 10rem;
+    position: absolute;
+    left: 40rem;
+    top: 4.5rem;
+    animation: blink 5s linear infinite;
+  }
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0c3f3b;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: $text;
+    text-shadow: 0 0 10px #4abbac, 0 0 20px #4abbac, 0 0 40px #4abbac,
+      0 0 80px #4abbac, 0 0 160px #4abbac;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}

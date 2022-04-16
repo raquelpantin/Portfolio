@@ -1,0 +1,49 @@
+@use "../../App.scss" as *;
+@use "../../styles/partials/_colors.scss" as *;
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_function.scss" as *;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-left: toRem(36);
+  margin-right: toRem(36);
+  height: 100vh;
+
+  &-title {
+    margin-top: toRem(32);
+    font-size: toRem(36);
+    font-weight: $semibold;
+    padding-bottom: toRem(32);
+  }
+
+  &-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-pfp {
+    width: toRem(475);
+    border-radius: 40px;
+    border: 4px solid $divider;
+  }
+
+  &-bio {
+    width: toRem(600);
+    padding-left: toRem(20);
+    font-size: toRem(18);
+    line-height: 2rem;
+  }
+
+  //   &-bio-text {
+  //     margin-bottom: 3rem;
+  //   }
+}
+
+.spacing {
+  margin-top: 1.5rem;
+}
