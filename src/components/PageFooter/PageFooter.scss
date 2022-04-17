@@ -1,0 +1,37 @@
+@use "../../App.scss" as *;
+@use "../../styles/partials/_colors.scss" as *;
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_function.scss" as *;
+
+.footer {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  padding-left: toRem(32);
+  align-items: center;
+  color: $footer;
+
+  &-link {
+    text-decoration: none;
+    color: $text;
+  }
+
+  &-text-container {
+    display: flex;
+    flex-direction: column;
+    color: $text;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-site {
+    font-size: toRem(16);
+  }
+
+  &-year {
+    font-size: toRem(14);
+    padding-bottom: toRem(20);
+  }
+}

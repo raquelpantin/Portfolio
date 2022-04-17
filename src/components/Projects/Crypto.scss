@@ -1,0 +1,57 @@
+@use "../../App.scss" as *;
+@use "../../styles/partials/_colors.scss" as *;
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_function.scss" as *;
+
+.crypto-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: toRem(36);
+  margin-left: toRem(36);
+}
+
+.crypto {
+  border-radius: 35px;
+  border: 4px solid $divider;
+  margin-right: toRem(30);
+
+  &-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: toRem(30);
+    width: 40vw;
+  }
+
+  &-title {
+    font-size: toRem(34);
+    font-weight: $semibold;
+    padding-bottom: toRem(20);
+  }
+
+  &-tech {
+    font-size: toRem(18);
+    padding-bottom: toRem(18);
+  }
+
+  &-description {
+    font-size: toRem(18);
+  }
+
+  &-github {
+    width: toRem(50);
+    margin-top: toRem(18);
+    margin-left: toRem(200);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $footer;
+      border-radius: 50%;
+      border: 1.5px solid $divider;
+    }
+  }
+}

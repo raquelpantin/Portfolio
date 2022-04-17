@@ -5,6 +5,7 @@ import HomeSection from "./components/HomeSection/HomeSection";
 import AboutSection from "./components/AboutSection/AboutSection";
 import ProjectSection from "./components/ProjectSection/ProjectSection";
 import ContactSection from "./components/ContactSection/ContactSection";
+import PageFooter from "./components/PageFooter/PageFooter";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <AboutSection />
         <ProjectSection />
         <ContactSection />
+        {/* <PageFooter /> */}
       </div>
     </Router>
   );
