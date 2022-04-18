@@ -4,3 +4,89 @@
 @use "../../styles/partials/_variables.scss" as *;
 @use "../../styles/partials/_mixins.scss" as *;
 @use "../../styles/partials/_function.scss" as *;
+
+.contact {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: toRem(80);
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: toRem(32);
+    background-color: $navbar;
+    border-radius: 4px;
+    padding: toRem(4) toRem(4);
+    width: toRem(330);
+    height: toRem(56);
+  }
+
+  &-name {
+    font-size: toRem(40);
+    font-weight: $semibold;
+    padding-bottom: toRem(32);
+  }
+
+  &-email {
+    width: toRem(50);
+    padding-left: toRem(16);
+  }
+
+  &-email-text {
+    font-size: toRem(18);
+    margin-left: toRem(16);
+  }
+
+  &-github {
+    width: toRem(50);
+    padding-left: toRem(16);
+  }
+
+  &-github-text {
+    font-size: toRem(18);
+    margin-left: toRem(16);
+  }
+
+  &-linkedin {
+    width: toRem(45);
+    height: toRem(30);
+    padding-left: toRem(16);
+  }
+
+  &-linkedin-text {
+    font-size: toRem(18);
+    margin-left: toRem(16);
+  }
+
+  &-location {
+    width: toRem(50);
+    padding-left: toRem(16);
+  }
+
+  &-location-text {
+    font-size: toRem(18);
+    margin-left: toRem(16);
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: toRem(24);
+  }
+}

@@ -53,7 +53,7 @@ function ProjectSection() {
               Back
             </Button>
             <Button
-              disabled={page === 5}
+              disabled={page === 4}
               onClick={() => {
                 setPage((currentPage) => currentPage + 1);
               }}
