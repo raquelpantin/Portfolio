@@ -7,15 +7,22 @@
 
 .footer {
   display: flex;
-  width: 50%;
-  justify-content: space-between;
+  width: 100%;
   padding-left: toRem(32);
   align-items: center;
   color: $footer;
+  background-color: $footer;
+  padding-top: toRem(20);
+  padding-bottom: toRem(16);
+  border-top: 3px solid $divider;
 
   &-link {
     text-decoration: none;
     color: $text;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &-text-container {
@@ -24,6 +31,7 @@
     color: $text;
     justify-content: center;
     align-items: center;
+    width: 85%;
   }
 
   &-site {

@@ -1,35 +1,60 @@
-import { NavLink, Link } from "react-router-dom";
+import * as Scroll from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import React, { useState } from "react";
-import { animateScroll as scroll } from "react-scroll/modules";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  const toggleTop = () => {
-    scroll.scrollToTop();
-  };
   return (
     <nav className="navbar">
       <div className="navbar__left">
-        <Link onClick={toggleTop} to="/" className="navbar__logo-link">
+        <Link
+          to="hero"
+          className="navbar__logo-link"
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={500}
+        >
           <h1 className="navbar__logo">raquelcodes.xyz</h1>
         </Link>
       </div>
-      <ul className="navbar__right">
+      <ul className="navbar__right active">
         <li className="navbar__about navbar__item">
-          <NavLink className="navbar__link" to="about">
+          <Link
+            className="navbar__link"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
             ABOUT
-          </NavLink>
+          </Link>
         </li>
 
         <li className="navbar__projects navbar__item">
-          <NavLink className="navbar__link" to="projects">
+          <Link
+            className="navbar__link"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
             PROJECTS
-          </NavLink>
+          </Link>
         </li>
         <li className="navbar__contact navbar__item">
-          <NavLink className="navbar__link" to="contact">
+          <Link
+            className="navbar__link"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={80}
+            duration={500}
+          >
             CONTACT
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </nav>

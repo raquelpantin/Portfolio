@@ -11,13 +11,13 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 
   &-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: toRem(80);
+    margin-right: toRem(40);
   }
 
   &-row {
@@ -30,6 +30,10 @@
     padding: toRem(4) toRem(4);
     width: toRem(330);
     height: toRem(56);
+
+    &:hover {
+      border: 2px solid $divider;
+    }
   }
 
   &-name {
@@ -51,6 +55,7 @@
   &-github {
     width: toRem(50);
     padding-left: toRem(16);
+    cursor: pointer;
   }
 
   &-github-text {
@@ -62,6 +67,7 @@
     width: toRem(45);
     height: toRem(30);
     padding-left: toRem(16);
+    cursor: pointer;
   }
 
   &-linkedin-text {
@@ -82,6 +88,10 @@
   &-form {
     display: flex;
     flex-direction: column;
+    width: toRem(350);
+    border-left: solid 2px $divider;
+    padding-left: toRem(40);
+    margin-top: toRem(32);
   }
 
   &-form-section {
@@ -89,4 +99,48 @@
     flex-direction: column;
     margin-bottom: toRem(24);
   }
+
+  &-input {
+    height: toRem(30);
+    border-radius: 5px;
+    border: none;
+    margin-top: toRem(4);
+    background-color: $text;
+
+    &:focus {
+      border: 3px solid $divider;
+      outline: none;
+    }
+  }
+
+  &-button {
+    border: 2px solid $divider;
+    background-color: transparent;
+    color: $text;
+    font-family: $main;
+    font-size: toRem(18);
+    font-weight: $semibold;
+    cursor: pointer;
+    width: toRem(100);
+    border-radius: 4px;
+    padding-top: toRem(3);
+    padding-bottom: toRem(3);
+    margin: 0 auto;
+    margin-top: toRem(18);
+
+    &:hover {
+      background-color: $footer;
+    }
+  }
+}
+
+label {
+  font-size: toRem(16);
+}
+
+textarea {
+  height: toRem(125);
+  resize: none;
+  border-radius: 5px;
+  background-color: $text;
 }

@@ -5,7 +5,17 @@ import "./PageFooter.scss";
 const PageFooter = () => {
   return (
     <div className="footer">
-      <Link to="/" className="footer-link">
+      <Link
+        to="/"
+        className="footer-link"
+        onClick={() => {
+          window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        }}
+      >
         <p className="footer-link-text">back to top ^</p>
       </Link>
       <div className="footer-text-container">

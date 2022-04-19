@@ -8,11 +8,11 @@
 .project {
   margin-left: toRem(32);
   height: 100vh;
+  padding-top: toRem(55);
   &-title {
-    margin-top: toRem(32);
     font-size: toRem(36);
     font-weight: $semibold;
-    padding-bottom: toRem(32);
+    padding-bottom: toRem(60);
   }
 
   &-container {
