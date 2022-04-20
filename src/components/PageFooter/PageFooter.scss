@@ -25,21 +25,42 @@
     }
   }
 
+  &-link-text {
+    font-size: toRem(12);
+    font-weight: $semibold;
+
+    @include tablet {
+      font-size: toRem(16);
+      font-weight: $medium;
+    }
+  }
+
   &-text-container {
     display: flex;
     flex-direction: column;
     color: $text;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 100%;
+
+    @include tablet {
+      width: 85%;
+      justify-content: center;
+    }
   }
 
   &-site {
-    font-size: toRem(16);
+    font-size: toRem(12);
+    @include tablet {
+      font-size: toRem(16);
+    }
   }
 
   &-year {
-    font-size: toRem(14);
-    padding-bottom: toRem(20);
+    font-size: toRem(10);
+    @include tablet {
+      font-size: toRem(14);
+      padding-bottom: toRem(20);
+    }
   }
 }

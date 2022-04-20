@@ -7,46 +7,90 @@
 
 .azul-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: toRem(36);
-  margin-left: toRem(36);
+  padding-top: toRem(16);
+  margin: 0, toRem(16);
+  width: 100%;
+
+  @include tablet {
+    flex-direction: row;
+    margin-right: toRem(36);
+    margin-left: toRem(36);
+  }
 }
 
 .azul {
   border-radius: 35px;
   border: 4px solid $divider;
-  margin-right: toRem(30);
+  width: toRem(400);
+  height: toRem(340);
+
+  @include tablet {
+    border-radius: 35px;
+    border: 4px solid $divider;
+    margin-right: toRem(30);
+    width: toRem(510);
+    height: toRem(430);
+  }
 
   &-text-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    line-height: toRem(30);
-    width: 40vw;
+    align-items: center;
+    line-height: toRem(20);
+    margin: 0, toRem(16);
+    width: 80%;
+
+    @include tablet {
+      align-items: flex-start;
+      line-height: toRem(30);
+      width: 40vw;
+    }
   }
 
   &-title {
-    font-size: toRem(34);
+    font-size: toRem(22);
     font-weight: $semibold;
-    padding-bottom: toRem(20);
+    padding-bottom: toRem(8);
+    margin-top: toRem(16);
+    text-align: center;
+
+    @include tablet {
+      font-size: toRem(34);
+      padding-bottom: toRem(20);
+    }
   }
 
   &-tech {
-    font-size: toRem(18);
-    padding-bottom: toRem(18);
+    font-size: toRem(14);
+    padding-bottom: toRem(4);
+
+    @include tablet {
+      font-size: toRem(18);
+      padding-bottom: toRem(18);
+    }
   }
 
   &-description {
-    font-size: toRem(18);
+    font-size: toRem(14);
+
+    @include tablet {
+      font-size: toRem(18);
+    }
   }
 
   &-github {
     width: toRem(50);
-    margin-top: toRem(18);
-    margin-left: toRem(200);
+    margin-top: toRem(8);
     cursor: pointer;
+
+    @include tablet {
+      width: toRem(50);
+      margin-top: toRem(18);
+      margin-left: toRem(200);
+    }
 
     &:hover {
       background-color: $footer;

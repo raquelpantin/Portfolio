@@ -8,44 +8,112 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin-left: toRem(36);
-  margin-right: toRem(36);
-  padding-top: toRem(50);
+  margin-left: toRem(16);
+  margin-right: toRem(16);
+  padding-top: toRem(20);
   height: 100vh;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin-left: toRem(36);
+    margin-right: toRem(36);
+    padding-top: toRem(20);
+    height: 100vh;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    margin-left: toRem(36);
+    margin-right: toRem(36);
+    padding-top: toRem(50);
+    height: 100vh;
+  }
 
   &-title {
     margin-top: toRem(32);
-    font-size: toRem(36);
+    font-size: toRem(24);
     font-weight: $semibold;
     padding-bottom: toRem(32);
+
+    @include tablet {
+      margin-top: toRem(32);
+      font-size: toRem(36);
+      font-weight: $semibold;
+      padding-bottom: toRem(32);
+    }
   }
 
   &-section {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &-pfp {
-    width: toRem(475);
+    width: toRem(275);
     border-radius: 40px;
     border: 4px solid $divider;
-    margin-right: toRem(16);
+    margin: 0;
+
+    @include tablet {
+      width: toRem(475);
+      border-radius: 40px;
+      border: 4px solid $divider;
+      margin-right: toRem(16);
+    }
   }
 
   &-bio {
-    width: toRem(600);
-    padding-left: toRem(20);
-    font-size: toRem(18);
-    line-height: 2rem;
-  }
+    width: 100%;
+    font-size: toRem(13);
+    line-height: 1rem;
+    padding-top: toRem(16);
+    text-align: center;
+    margin: 0, toRem(16);
 
-  //   &-bio-text {
-  //     margin-bottom: 3rem;
-  //   }
+    @include tablet {
+      width: 100%;
+      font-size: toRem(16);
+      line-height: 1.5rem;
+      padding-top: toRem(16);
+      text-align: center;
+      margin: 0, toRem(16);
+    }
+    @include desktop {
+      width: toRem(600);
+      padding-left: toRem(20);
+      font-size: toRem(18);
+      line-height: 2rem;
+    }
+  }
 }
 
 .spacing {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+
+  @include tablet {
+    margin-top: 1rem;
+  }
+  @include desktop {
+    margin-top: 1.5rem;
+  }
 }

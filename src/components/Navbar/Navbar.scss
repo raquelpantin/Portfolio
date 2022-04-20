@@ -8,25 +8,43 @@
 .navbar {
   background-color: $navbar;
   border-bottom: 3px solid $divider;
-  padding: toRem(20) toRem(40);
+  padding: toRem(20) toRem(20);
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: toRem(80);
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 10;
 
+  @include tablet {
+    padding: toRem(20) toRem(40);
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
   &__logo {
-    font-size: toRem(28);
+    font-size: toRem(15);
+    font-weight: $semibold;
+    padding-bottom: toRem(8);
+
+    @include tablet {
+      font-size: toRem(28);
+      padding-bottom: 0;
+    }
   }
 
   &__right {
     display: flex;
     list-style: none;
     align-items: center;
-    font-size: toRem(24);
+    font-size: toRem(15);
+
+    @include tablet {
+      font-size: toRem(24);
+    }
   }
 
   &__item {
@@ -43,10 +61,6 @@
       color: #ffcb9a;
     }
   }
-
-  // &__item .active {
-  //   border-bottom: 2px solid $text;
-  // }
 
   &__logo-link {
     text-decoration: none;

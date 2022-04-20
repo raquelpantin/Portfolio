@@ -18,12 +18,23 @@
     position: absolute;
     width: 1176px;
     height: 452px;
-    left: 12rem;
-    top: 14rem;
+    left: 2.5rem;
+    top: 10rem;
     font-weight: 600;
-    font-size: 150px;
+    font-size: toRem(55);
     line-height: 177px;
     animation: animate 8s linear infinite;
+
+    @include tablet {
+      height: 452px;
+      top: 13rem;
+      font-size: toRem(100);
+    }
+    @include desktop {
+      left: 12rem;
+      top: 14rem;
+      font-size: 150px;
+    }
   }
   &-title {
     color: $text;
@@ -31,11 +42,22 @@
 
   &-arrow {
     color: $text;
-    width: 10rem;
+    width: 4rem;
     position: absolute;
-    left: 40rem;
-    top: 4.5rem;
+    left: 14.5rem;
+    top: 4.75rem;
     animation: blink 5s linear infinite;
+
+    @include tablet {
+      width: 6rem;
+      left: 27rem;
+    }
+
+    @include desktop {
+      width: 10rem;
+      left: 40rem;
+      top: 4.5rem;
+    }
   }
 }
 

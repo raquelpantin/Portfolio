@@ -8,28 +8,43 @@
 .contact {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
+
+  @include tablet {
+    flex-direction: row;
+    height: 90vh;
+  }
 
   &-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-right: toRem(40);
+    align-items: center;
+
+    @include tablet {
+      align-items: flex-start;
+      margin-right: toRem(40);
+    }
   }
 
   &-row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: toRem(32);
+    margin-bottom: toRem(16);
     background-color: $navbar;
     border-radius: 4px;
-    padding: toRem(4) toRem(4);
-    width: toRem(330);
-    height: toRem(56);
+    width: toRem(250);
+    height: toRem(37);
+
+    @include tablet {
+      margin-bottom: toRem(32);
+      padding: toRem(4) toRem(4);
+      width: toRem(330);
+      height: toRem(56);
+    }
 
     &:hover {
       border: 2px solid $divider;
@@ -37,9 +52,13 @@
   }
 
   &-name {
-    font-size: toRem(40);
+    font-size: toRem(26);
     font-weight: $semibold;
-    padding-bottom: toRem(32);
+    padding-bottom: toRem(10);
+    @include tablet {
+      font-size: toRem(40);
+      padding-bottom: toRem(32);
+    }
   }
 
   &-email {
@@ -48,8 +67,13 @@
   }
 
   &-email-text {
-    font-size: toRem(18);
-    margin-left: toRem(16);
+    font-size: toRem(14);
+    margin-left: toRem(10);
+
+    @include tablet {
+      font-size: toRem(18);
+      margin-left: toRem(16);
+    }
   }
 
   &-github {
@@ -59,8 +83,13 @@
   }
 
   &-github-text {
-    font-size: toRem(18);
-    margin-left: toRem(16);
+    font-size: toRem(14);
+    margin-left: toRem(10);
+
+    @include tablet {
+      font-size: toRem(18);
+      margin-left: toRem(16);
+    }
   }
 
   &-linkedin {
@@ -71,8 +100,12 @@
   }
 
   &-linkedin-text {
-    font-size: toRem(18);
-    margin-left: toRem(16);
+    font-size: toRem(14);
+    margin-left: toRem(10);
+    @include tablet {
+      font-size: toRem(18);
+      margin-left: toRem(16);
+    }
   }
 
   &-location {
@@ -81,31 +114,50 @@
   }
 
   &-location-text {
-    font-size: toRem(18);
-    margin-left: toRem(16);
+    font-size: toRem(14);
+    margin-left: toRem(10);
+
+    @include tablet {
+      font-size: toRem(18);
+      margin-left: toRem(16);
+    }
   }
 
   &-form {
     display: flex;
     flex-direction: column;
-    width: toRem(350);
-    border-left: solid 2px $divider;
-    padding-left: toRem(40);
-    margin-top: toRem(32);
+    width: toRem(250);
+
+    @include tablet {
+      width: toRem(350);
+      border-left: solid 2px $divider;
+      padding-left: toRem(40);
+      margin-top: toRem(32);
+    }
   }
 
   &-form-section {
     display: flex;
     flex-direction: column;
-    margin-bottom: toRem(24);
+    margin-bottom: toRem(8);
+
+    @include tablet {
+      margin-bottom: toRem(24);
+    }
   }
 
   &-input {
-    height: toRem(30);
+    height: toRem(24);
     border-radius: 5px;
     border: none;
     margin-top: toRem(4);
     background-color: $text;
+
+    @include tablet {
+      height: toRem(30);
+      border-radius: 5px;
+      margin-top: toRem(4);
+    }
 
     &:focus {
       border: 3px solid $divider;
@@ -139,8 +191,19 @@ label {
 }
 
 textarea {
-  height: toRem(125);
+  height: toRem(100);
   resize: none;
   border-radius: 5px;
   background-color: $text;
+  margin-top: 0.75rem;
+
+  @include tablet {
+    margin-top: 0;
+    height: toRem(125);
+  }
+
+  &:focus {
+    border: 3px solid $divider;
+    outline: none;
+  }
 }
