@@ -1,6 +1,5 @@
-import * as Scroll from "react-scroll";
-import { Link, animateScroll as scroll } from "react-scroll";
-import React, { useState } from "react";
+import { Link } from "react-scroll";
+import React from "react";
 import "./Navbar.scss";
 
 const Navbar = () => {
