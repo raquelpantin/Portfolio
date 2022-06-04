@@ -16,6 +16,7 @@
   @include tablet {
     margin-left: toRem(32);
     padding-top: toRem(55);
+    margin-top: toRem(150);
   }
 
   &-title {
